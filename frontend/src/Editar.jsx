@@ -13,7 +13,7 @@ const Editar = () => {
     const navigate = useNavigate();
 
     const buscaTime = () => {
-        axios.get(`http://localhost:7000/api/times/${id}`)
+        axios.get(`https://timeseuropeus.onrender.com/api/times/${id}`)
         .then(resposta => {
             console.log(resposta.data);
             setNome(resposta.data[0].nome);
@@ -32,7 +32,7 @@ const Editar = () => {
 
     const editaTime = (event) => {
         event.preventDefault();
-        axios.put(`http://localhost:7000/api/times/${id}`, {nome, pais, descricao, imagem})
+        axios.put(`https://timeseuropeus.onrender.com/api/times/${id}`, {nome, pais, descricao, imagem})
         .then(resposta => {
             console.log(resposta);
             navigate("/");

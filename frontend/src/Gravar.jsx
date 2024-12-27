@@ -13,7 +13,7 @@ const Gravar = () => {
 
     const newTime = (event) => {
         event.preventDefault();
-        axios.post(`http://localhost:7000/api/times`, {nome, pais, descricao, imagem})
+        axios.post(`https://timeseuropeus.onrender.com/api/times`, {nome, pais, descricao, imagem})
         .then(resposta => {
             console.log(resposta);
             navigate("/");

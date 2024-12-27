@@ -9,7 +9,7 @@ const Principal = () => {
     const navigate = useNavigate();
 
     const carregaTimes = () => {
-        axios.get(`http://localhost:7000/api/times`)
+        axios.get(`https://timeseuropeus.onrender.com/api/times`)
         .then(resposta => {
             console.log(resposta.data);
             setTimes(resposta.data);
@@ -20,7 +20,7 @@ const Principal = () => {
     }
 
     const deletaTime = (id) => {
-        axios.delete(`http://localhost:7000/api/times/${id}`)
+        axios.delete(`https://timeseuropeus.onrender.com/api/times/${id}`)
         .then(resposta => {
             console.log(resposta.data);
             carregaTimes();
